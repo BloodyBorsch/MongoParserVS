@@ -1,10 +1,7 @@
-from itertools import islice
-from mongo_class import Mongo_class
+from parser_class import Parser_class
 
-def Start():
-    db = Mongo_class()
-    db.test()
 
+parser = Parser_class()
 
 if __name__ == "__main__":
-    Start()
+    parser.start(int(input("Введите 1 для сбора данных или 0 для просмотра: ")))
