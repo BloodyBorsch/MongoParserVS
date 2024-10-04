@@ -18,12 +18,14 @@ class Mongo_class:
 
     def get_from_db(self):
         for doc in self.books.find({}, {"_id": False, "description": False}):
-            print(doc) 
+            print(doc)
+            
+        print(f"Всего файлов: {self.books.count_documents()}")
 
     # for doc in db.find():
     #     print(doc)
 
-    # for doc in db.find({"x": {"$gt": 30}}):
+    # for doc in db.find({"x": {"$gt": 30}}): $lt - less then
     #     print(doc)
 
     # for doc in db.find({$or: [{"x": value1}, {"y": value2}]}):
